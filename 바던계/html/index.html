@@ -3,35 +3,164 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>index</title>
+    <title>바던계</title>
+
     <link rel="stylesheet" href="../css/bootsctrap_css/bootstrap.css">
-</head>
-<body>
-<div>
-    <button type="button">기본버튼</button>
-    <button type="button" class="btn">BS버튼</button>
-    <button type="button" class="btn btn-default">BS default 버튼</button>
-    <button type="button" class="btn btn-primary">BS primary 버튼</button>
-    <button type="button" class="btn btn-success">BS success 버튼</button>
-    <button type="button" class="btn btn-warning">BS warning 버튼</button>
-    <button type="button" class="btn btn-info">BS info 버튼</button>
-    <button type="button" class="btn btn-danger">BS danger 버튼</button>
-</div>
-<div>
-    <button type="button">기본버튼</button>
-    <button type="button" class="btn">BS버튼</button>
-    <button type="button" class="btn btn-default btn-lg">BS default 버튼</button>
-    <button type="button" class="btn btn-primary btn-lg">BS primary 버튼</button>
-    <button type="button" class="btn btn-success btn-lg">BS success 버튼</button>
-    <button type="button" class="btn btn-warning btn-lg">BS warning 버튼</button>
-    <button type="button" class="btn btn-info btn-lg">BS info 버튼</button>
-    <button type="button" class="btn btn-danger btn-lg">BS danger 버튼</button>
-</div>
-
-
+    <link rel="stylesheet" href="../css/main.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="../js/bootsctrap_js/bootstrap.js"></script>
+    <script src="../js/include.js"></script>
+</head>
+
+<body>
+  <header>
+    <div w3-include-html="header.html"></div>
+  </header>
+  
+    <main>
+
+        <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-label="Slide 1" aria-current="true"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2" class=""></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3" class=""></button>
+          </div>
+
+          <div class="carousel-inner">
+           
+
+            <div class="carousel-item active">
+              <svg class="bd-placeholder-img" width="100%" height="300px" xmlns="" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+                <rect width="100%" height="100%" fill="#777"></rect>
+              </svg>
+              <div class="container">
+                <div class="carousel-caption text-start">
+                  <p>오늘 하루 생각해보기</p>
+                  <p><a class="btn btn-lg btn-primary" href="#">보러가기</a></p>
+                </div>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <svg class="bd-placeholder-img" width="100%" height="300px" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+                <rect width="100%" height="100%" fill="#777"></rect>
+              </svg>
+              <div class="container">
+                <div class="carousel-caption">
+                  <p>생각 정리하기</p>
+                  <p><a class="btn btn-lg btn-primary" href="#">보러가기</a></p>
+                </div>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <svg class="bd-placeholder-img" width="100%" height="300px" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+                <rect width="100%" height="100%" fill="#777"></rect>
+              </svg>
+              <div class="container">
+                <div class="carousel-caption text-end">
+                  <p>내일을 위해 생각해보기</p>
+                  <p><a class="btn btn-lg btn-primary" href="#">보러가기</a></p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+    
+      
+        <div class="container marketing" style="margin-top: 3%; align-items: center;" >
+          <p style="font-size: x-large; text-align: center;" >이달의 selectors</p>
+
+          <div class="row">
+            <div class="col-lg-4">
+              <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false">
+                <title>Placeholder</title>
+                <rect width="100%" height="100%" fill="#777"></rect>
+                <text x="50%" y="50%" fill="#777" dy=".3em">140x140</text>
+              </svg>
+              <h2>111</h2>
+              <p>111의 이야기</p>
+              <p><a class="btn btn-secondary" href="#">더보기 »</a></p>
+            </div><!-- /.col-lg-4 -->
+
+            <div class="col-lg-4">
+              <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
+              <h2>222</h2>
+              <p>222 내용</p>
+              <p><a class="btn btn-secondary" href="#">더보기 »</a></p>
+            </div><!-- /.col-lg-4 -->
+
+            <div class="col-lg-4">
+              <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
+              <h2>333</h2>
+              <p>333 계획</p>
+              <p><a class="btn btn-secondary" href="#">더보기 »</a></p>
+            </div><!-- /.col-lg-4 -->
+          </div><!-- /.row -->
+      
+          <!-- START THE FEATURETTES -->
+      
+          <hr class="featurette-divider">
+      
+          <div class="row featurette">
+            <div class="col-md-7">
+              <h2 class="featurette-heading">제목 출력 <span class="text-muted">부제목 처럼 효과</span></h2>
+              <p class="lead">내용 출력</p>
+            </div>
+            <div class="col-md-5">
+              <div style="width: 500; height: 500;"><img src="../img/111.jfif"  width="100%" height="100%" ></div>
+            </div>
+          </div>
+      
+          <hr class="featurette-divider">
+          <div class="row featurette">
+            <div class="col-md-7 order-md-2">
+              <h2 class="featurette-heading">제목 출력 <span class="text-muted">부제목 처럼 효과</span></h2>
+              <p class="lead">내용 출력</p>
+            </div>
+            <div class="col-md-5 order-md-1">
+              <div style="width: 500; height: 500;"><img src="../img/222.jfif"  width="100%" height="100%" ></div>
+            </div>
+          </div>
+      
+          <hr class="featurette-divider">
+      
+          <div class="row featurette">
+            <div class="col-md-7">
+              <h2 class="featurette-heading">제목 출력 <span class="text-muted">부제목 처럼 효과</span></h2>
+              <p class="lead">내용 출력</p>
+
+            </div>
+            <div class="col-md-5">
+              <div style="width: 500; height: 500;"><img src="../img/333.jfif"  width="100%" height="100%" ></div>
+            </div>
+          </div>
+      
+          <hr class="featurette-divider">
+      
+          <!-- /END THE FEATURETTES -->
+      
+        </div><!-- /.container -->
+      
+      </main>
+
+
+      <footer>
+        <div w3-include-html="footer.html"></div>  
+      </footer>
 </body>
+
+<script>includeHTML();</script>
+
 </html>
-
-
