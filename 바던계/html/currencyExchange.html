@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>환율계산기</title>
+    <link rel="stylesheet" href="../css/test.css">
+</head>
+
+<body>
+    <div class="exchange-box">
+        <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn" id="from-button">USD</button>
+            <div id="myDropdown" class="dropdown-content" id="from-currency-list">
+                <a href="#">USD</a>
+                <a href="#">KRW</a>
+                <a href="#">THB</a>
+            </div>
+        </div>
+        <div class="input-area">
+            <input type="number" />
+            <div>달러 </div>
+        </div>
+    </div>
+    
+    <h1>=</h1>
+
+    <div class="exchange-box">
+        <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn" id="to-button">USD</button>
+            <div id="myDropdown" class="dropdown-content" id="to-currency-list">
+                <a href="#">USD</a>
+                <a href="#">KRW</a>
+                <a href="#">THB</a>
+            </div>
+        </div>
+        <div class="input-area">
+            <input type="number" />
+            <div>달러 </div>
+        </div>
+    </div>
+
+
+
+
+
+    <!--     
+    <table style="border: black solid 1px; width: 300px;">
+        <tr>
+            <td colspan="2">
+                <select style="width: 100%; text-align: center;" id="from-currency-list">
+                    <option>USD</option>
+                    <option>KRW</option>
+                    <option>THB</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td ><input type="text" placeholder="금액을 입력하세요"/></td>
+            <td>$</td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <select style="width: 100%; text-align: center;" id="to-currency-list">
+                    <option>USD</option>
+                    <option>KRW</option>
+                    <option>THB</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td ><input type="text" placeholder="금액을 입력하세요"/></td>
+            <td>$</td>
+        </tr>
+    </table> -->
+
+    <script src="../js/test.js"></script>
+</body>
+
+</html>
