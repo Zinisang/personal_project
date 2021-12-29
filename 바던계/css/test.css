@@ -1,7 +1,7 @@
 /* Dropdown Button */
 .exchange-box{
     border: 1px solid black;
-    width: 400px;
+    width: 300px;
 }
 .dropbtn {
     background-color: #2e00fa;
@@ -56,12 +56,24 @@
       text-align: right;
       padding-right: 100px;
   }
-  .input-area input{
+  .amount-input{
     width: 100%;
     box-sizing: border-box;
+    text-align: right;
+    border:none;
+    font-size: large;
+  }
+  .korean-num{
+    font-size: large;
   }
 
-  .flag-img {
-    width: 18px;
-    height: 12px;
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
   }

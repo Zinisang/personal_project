@@ -26,60 +26,83 @@ let currencyRatio = {
     USD: {
         KRW: 1184.36,
         THB: 35.38,
-        unit: "달러"
+        unit: "달러",
     },
     KRW: {
         USD: 0.00084,
         THB: 0.32,
-        unit: "원"
+        unit: "원",
     },
     THB: {
         KRW: 40,
         USD: 38.123,
-        unit: "바트"
+        unit: "바트",
     },
 };
 
 let fromCurrency = "USD";
 let toCurrency = "KRW";
-let fromUnit = "달러";
-let toUnit = "원";
 
-document
-    .querySelectorAll("#from-currency-list a")
+var unitWords = ["", "만 ", "억 ", "조 ", "경 "];
+var splitUnit = 10000;
+let toButton = document.getElementById("to-button");
+let fromButton = document.getElementById("from-button");
+
+document.querySelectorAll("#from-currency-list a")
     .forEach(menu => menu.addEventListener("click", function () {
         document.getElementById("from-button").textContent = this.textContent;
         fromCurrency = this.textContent;
-        // console.log("fromCurrency는", fromCurrency);
 
-        document.getElementById("from-unit").textContent = this.textContent;
-        fromUnit = this.textContent;
-        convert()
+        convert("from");
     }));
 
-document
-    .querySelectorAll("#to-currency-list a")
+document.querySelectorAll("#to-currency-list a")
     .forEach(menu => menu.addEventListener("click", function () {
         document.getElementById("to-button").textContent = this.textContent;
         toCurrency = this.textContent;
-        // console.log("toCurrency는", fromCurrency);
-        convert()
+
+        convert("to");
     }));
 
-function convert() {
-    // console.log("키업 이벤트");
-    let amount = document.getElementById("from-input").value;
-    // console.log("돈은"+ amount);
-    let convertedAmount = amount * currencyRatio[fromCurrency][toCurrency]
-    // console.log("환전 결과 : " + convertedAmount);
-    document.getElementById("to-input").value = convertedAmount
+function convert(type) {
+
+    let amount = 0;
+    if (type = "from") {
+        amount = document.getElementById("from-input").value;
+        let convertedAmount = amount * currencyRatio[fromCurrency][toCurrency]
+        document.getElementById("to-input").value = convertedAmount;
+        renderKoreanNumber(amount, convertedAmount);
+    } else {
+        amount = document.getElementById("to-input").value;
+        let convertedAmount = amount * currencyRatio[toCurrency][fromCurrency]
+        document.getElementById("from-input").value = convertedAmount;
+        renderKoreanNumber(convertedAmount, amount);
+    }
 }
 
 /--------------------------------------------------------------------/
 
-function convertTo() {
-    let amount = document.getElementById("to-input").value;
-    let convertedAmount = amount * currencyRatio[toCurrency][fromCurrency]
-    document.getElementById("from-input").value = convertedAmount
-}
-
+function renderKoreanNumber(from, to) {
+    document.getElementById("fromNumToKorea").textContent =
+      readNum(from) + currencyRatio[fromCurrency].unit;
+    document.getElementById("toNumToKorea").textContent =
+      readNum(to) + currencyRatio[toCurrency].unit;
+  }
+  function readNum(num) {
+    let resultString = "";
+    let resultArray = [];
+    for (let i = 0; i < unitWords.length; i++) {
+      let unitResult =
+        (num % Math.pow(splitUnit, i + 1)) / Math.pow(splitUnit, i);
+      unitResult = Math.floor(unitResult);
+      if (unitResult > 0) {
+        resultArray[i] = unitResult;
+      }
+    }
+    for (let i = 0; i < resultArray.length; i++) {
+      if (!resultArray[i]) continue;
+      resultString = String(resultArray[i]) + unitWords[i] + resultString;
+    }
+    return resultString;
+  }
+  
