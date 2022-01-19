@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>드래그앤드롭</title>
+	<link rel="stylesheet" href="../css/dragAndDrop.css">
+</head>
+
+<body>
+	<form>
+		<div id="wholeList" ondrop="drop(this, event);" ondragenter="return false;" ondragover="return false;">
+			<h2>내용을 입력하고 드레그해서 넣어보세요</h2>
+			<div id="listManager">
+				<div id="addList" onclick="add_textbox()">+</div>
+				<div id="deleteList" onclick="remove()">-</div>
+			</div>
+			<input type="text" draggable="true" id="text" ondragstart="drag(this, event)">
+		</div>
+	</form>
+
+	<div class="fl" ondrop="drop(this, event);" ondragenter="return false;" ondragover="return false;">
+		<h2>Todo</h2>
+	</div>
+	<div class="fl" ondrop="drop(this, event);" ondragenter="return false;" ondragover="return false;">
+		<h2>Doing</h2>
+	</div>
+	<div class="fl" ondrop="drop(this, event);" ondragenter="return false;" ondragover="return false;">
+		<h2>Done</h2>
+	</div>
+
+	<script src="../js/dragAndDrop.js"></script>
+</body>
+
+</html>
+
+

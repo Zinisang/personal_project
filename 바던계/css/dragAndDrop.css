@@ -1,0 +1,58 @@
+div {
+    width: 320px;
+    height: 320px;
+    text-align: center;
+    border: 1px solid #000;
+    padding: 5px;
+    margin: 20px;
+}
+
+h2 {
+    font-size: .8em;
+    color: #000;
+    font-weight: bold;
+}
+
+.fl {
+    float: left;
+}
+
+#listManager {
+    width: 96%;
+    height: 10%;
+    margin: 0;
+    display: flex;
+    /* align-items: right; */
+    /* flex-direction: row; */
+    justify-content: right;
+    border-style: none;
+
+}
+
+#addList {
+    width: 10px;
+    height: 10px;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    margin-right: 10px;
+}
+
+#addList:hover {
+    background: rgb(141, 141, 224);
+    cursor: pointer;
+}
+
+#deleteList {
+    width: 10px;
+    height: 10px;
+    display: flex;
+    align-items: center;
+    margin: 0;
+
+}
+
+#deleteList:hover {
+    background: rgb(141, 141, 224);
+    cursor: pointer;
+}
