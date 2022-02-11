@@ -1,23 +1,13 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
-    <script>
-        const add_textbox = () => {
-            const box = document.getElementById("box");
-            const newP = document.createElement('p');
-            newP.innerHTML = "<input type='text'> <input type='button' value='삭제' onclick='remove(this)'>";
-            box.appendChild(newP);
-        }
-        const remove = (obj) => {
-            document.getElementById('box').removeChild(obj.parentNode);
-        }
-    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
 <body>
-    <form>
-        <div id="box">
-            <input type="text"> <input type="button" value="추가" onclick="add_textbox()">
-        </div>
-    </form>
+    <p>result</p>
+    <script src="../js/test.js"></script>
 </body>
 </html>
