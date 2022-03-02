@@ -13,4 +13,4 @@ if((parseInt(date)) > (parseInt(fixed_date)) ){
 
 var nm = new Date(year, month, fixed_date);
 
-console.log(nm)
+console.log(nm);
