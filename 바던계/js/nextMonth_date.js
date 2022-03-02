@@ -1,5 +1,5 @@
 //다음달 자동이체일 확인
-var start_date = '20210105'
+var start_date = '20210508'
 
 var now = new Date();
 var year = now.getFullYear();
@@ -11,6 +11,6 @@ if((parseInt(date)) > (parseInt(fixed_date)) ){
     month = (""+(parseInt(month)+1));
 };
 
-var nm = new Date(year, month, fixed_date);
+var next_month = new Date(year, month, (""+(parseInt(fixed_date)+1)));
 
-console.log(nm);
+console.log(next_month); // 2022-03-08 가 나온다
