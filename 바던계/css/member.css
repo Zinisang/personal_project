@@ -1,0 +1,49 @@
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ------------- 로그인 ------------- */
+.member_login {
+    text-align: center;
+    width: 500px;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* ------------- 회원가입 ------------- */
+.member_register{
+    text-align: center;
+    width: 500px;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.member_register > form{
+    width: 100%;    
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.register_title{
+    text-align: center;
+    width: 30%;
+    padding-left: 10%;
+}
+
+.register_btn{
+    justify-content: center;
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+}

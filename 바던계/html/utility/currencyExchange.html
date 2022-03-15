@@ -1,15 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>환율계산기</title>
-    <link rel="stylesheet" href="../css/currencyExchange.css">
+
+    <link rel="stylesheet" href="/바던계/css/currencyExchange.css">
+    <link rel="stylesheet" href="/바던계/css/bootstrap.css">
+    <link rel="stylesheet" href="/바던계/css/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/바던계/js/bootstrap.js"></script>
+    <script src="/바던계/js/include.js"></script>
 </head>
 
 <body>
+    <header>
+        <div w3-include-html="/바던계/html/fixedForm/header.html"></div>
+    </header>
+
     <div class="exchange-box">
         <div class="dropdown">
             <button onclick="fromFunction()" class="dropbtn" id="from-button">USD</button>
@@ -42,7 +50,8 @@
         </div>
     </div>
 
-    <script src="../js/currencyExchange.js"></script>
+    <script src="/바던계/js/currencyExchange.js"></script>
+    <script>includeHTML();</script>
 </body>
 
 </html>

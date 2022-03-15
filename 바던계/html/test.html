@@ -1,13 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>회원가입</title>
+    <link rel="stylesheet" href="/바던계/css/member.css">
 </head>
+
 <body>
-    <p>result</p>
-    <script src="../js/test.js"></script>
+    <div class="member_register">
+        <h2>회원가입</h2>
+        <form>
+            <div>
+                <input type="text" placeholder="아이디" id="id" />
+            </div>
+            <div>
+                <input type="password" placeholder="비밀번호" id="password">
+            </div>
+            <div>
+                <input type="password" placeholder="비밀번호확인" id="password_check">
+            </div>
+            <div>
+                <input type="email" placeholder="이메일" id="email">
+            </div>
+            <div>
+                <input type="text" placeholder="이름" id="name">
+            </div>
+            <div>
+                <input type="text" placeholder="주소" id="address">
+            </div>
+            <div>
+                <input type="text" placeholder="연락처" id="contact_number">
+            </div>
+            <div>
+                정보수집
+                <input type="radio" name="agreement" >동의
+                <input type="radio" name="agreement" >미동의
+            </div>
+
+            <div>
+                <input type="button" value="회원가입">
+                <input type="reset" value="다시쓰기">
+                <input type="button" value="로그인" onclick="location.href='login.html'">
+            </div>
+
+        </form>
+    </div>
 </body>
+
 </html>
