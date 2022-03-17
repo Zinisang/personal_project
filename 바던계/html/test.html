@@ -1,53 +1,46 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>회원가입</title>
-    <link rel="stylesheet" href="/바던계/css/member.css">
+    <title>Document</title>
 </head>
-
 <body>
-    <div class="member_register">
-        <h2>회원가입</h2>
-        <form>
-            <div>
-                <input type="text" placeholder="아이디" id="id" />
-            </div>
-            <div>
-                <input type="password" placeholder="비밀번호" id="password">
-            </div>
-            <div>
-                <input type="password" placeholder="비밀번호확인" id="password_check">
-            </div>
-            <div>
-                <input type="email" placeholder="이메일" id="email">
-            </div>
-            <div>
-                <input type="text" placeholder="이름" id="name">
-            </div>
-            <div>
-                <input type="text" placeholder="주소" id="address">
-            </div>
-            <div>
-                <input type="text" placeholder="연락처" id="contact_number">
-            </div>
-            <div>
-                정보수집
-                <input type="radio" name="agreement" >동의
-                <input type="radio" name="agreement" >미동의
-            </div>
-
-            <div>
-                <input type="button" value="회원가입">
-                <input type="reset" value="다시쓰기">
-                <input type="button" value="로그인" onclick="location.href='login.html'">
-            </div>
-
-        </form>
-    </div>
+    <table border="1" style="text-align: center; border-collapse: collapse;">
+        <tr>
+            <td rowspan="3">구분</td>
+            <td colspan="6"> CD/ATM 이용수수료</td>
+        </tr>
+        <tr>
+            <td colspan="3">현금인출</td>
+            <td>당행이체</td>
+            <td colspan="2">타행이체</td>
+        </tr>
+        <tr>
+            <td>영업시간중</td>
+            <td>영업시간 외</td>
+            <td>시간외 연속출금</td>
+            <td>시간중/외</td>
+            <td>영업시간중</td>
+            <td>영업시간 외</td>
+        </tr>
+        <tr>
+            <td>10만원 이하</td>
+            <td rowspan="2">-</td>
+            <td rowspan="2">500 (5만원이하 소액인출 감면)</td>
+            <td rowspan="2">연속 출금시 차회인출건 50%감면</td>
+            <td rowspan="2">-</td>
+            <td>500</td>
+            <td>600</td>
+        </tr>
+        <tr>
+            <td>10만원 초과</td>
+            <td>1,000</td>
+            <td>1,000</td>
+        </tr>
+    </table>
 </body>
-
 </html>
