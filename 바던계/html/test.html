@@ -1,46 +1,152 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>modal 테스트</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="/바던계/js/test.js"></script>
+
 </head>
+<style>
+  #whole_box{
+    border: solid 1px black;
+    width: 400px;
+    text-align: center;
+  }
+    #control_box{
+        display: flex;
+        text-align: center;
+    }
+    #info_box{
+      width: auto;
+      text-align: center;
+    }
+    #info_box > .button_box > input{
+      width: 350px;
+    }
+    .button_box{
+        margin: auto;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+</style>
+
 <body>
-    <table border="1" style="text-align: center; border-collapse: collapse;">
-        <tr>
-            <td rowspan="3">구분</td>
-            <td colspan="6"> CD/ATM 이용수수료</td>
-        </tr>
-        <tr>
-            <td colspan="3">현금인출</td>
-            <td>당행이체</td>
-            <td colspan="2">타행이체</td>
-        </tr>
-        <tr>
-            <td>영업시간중</td>
-            <td>영업시간 외</td>
-            <td>시간외 연속출금</td>
-            <td>시간중/외</td>
-            <td>영업시간중</td>
-            <td>영업시간 외</td>
-        </tr>
-        <tr>
-            <td>10만원 이하</td>
-            <td rowspan="2">-</td>
-            <td rowspan="2">500 (5만원이하 소액인출 감면)</td>
-            <td rowspan="2">연속 출금시 차회인출건 50%감면</td>
-            <td rowspan="2">-</td>
-            <td>500</td>
-            <td>600</td>
-        </tr>
-        <tr>
-            <td>10만원 초과</td>
-            <td>1,000</td>
-            <td>1,000</td>
-        </tr>
-    </table>
+<div id="whole_box">
+    <p>이체할 계좌번호를 입력 혹은 선택</p>
+    <div id="control_box">  
+
+        <div class="button_box">
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#select_bank_list">
+                내계좌
+            </button>
+        </div>
+        <div class="button_box">
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#select_recent_list">
+                최근이체
+            </button>
+        </div>
+        <div class="button_box">
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#select_most_list">
+                자주쓰는
+            </button>
+        </div>
+    </div>
+
+
+    <div id="control_box">
+      <div class="button_box">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#select_bank_list">
+            은행선택 ↓
+        </button>
+      </div>
+      <div class="button_box">
+        <input type="text" placeholder="계좌번호 입력">
+      </div>
+    </div>
+
+
+    <div id="info_box">
+      <div class="button_box">
+        <input type="text" placeholder="보낼 금액입력">
+      </div>
+      <div class="button_box">
+        <input type="text" placeholder="받는분 통장 표시">
+      </div>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="select_bank_list" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">은행선택</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <div onclick="bankListFunction()" class="button_box">하나은행</div>
+            <div class="button_box">우리은행</div>
+            <div class="button_box">신한은행</div>
+            <div class="button_box">국민은행</div>  
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="select_recent_list" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">최근이체</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <div class="button_box">이상진</div>
+            <div class="button_box">김재현</div>
+            <div class="button_box">박영은</div>
+            <div class="button_box">박가인</div>
+            <div class="button_box">이인학</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="select_most_list" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">자주쓰는</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <div class="button_box">111-111-111</div>
+            <div class="button_box">222-222-222</div>
+            <div class="button_box">333-333-333</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </body>
+
 </html>
