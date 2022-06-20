@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>buttonCondition</title>
+
+    <script type="text/javascript" src="/바던계/js/utility/data.js"></script>
+</head>
+<body>
+    <div>
+        본문의 어떠한 내용
+    </div>
+    
+    <form>
+        ${data_count > 5 ? `
+            <button name="버튼이름">데이터가 5개 이상이면 나오는 버튼</button>
+        `:""}
+    </form>
+
+    <div>
+        <form>
+            ${data_count > 5 ? `
+                <table>
+                    <tr>
+                        <td>1-1</td>
+                        <td>1-2</td>
+                    </tr>
+                    <tr>
+                        <td>2-1</td>
+                        <td>2-2</td>
+                    </tr>
+                </table>
+            `:""}
+        </form>
+    </div>
+
+</body>
+</html>
